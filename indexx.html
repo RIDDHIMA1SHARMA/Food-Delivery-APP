@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="foodApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body ng-controller="FoodController">
+
+    <h2>🍕 Online Food Delivery</h2>
+
+    <div ng-repeat="food in foods">
+        <p><strong>{{ food.name }}</strong> - ${{ food.price }}</p>
+        <button ng-click="addToCart(food)">Add to Cart</button>
+    </div>
+
+    <h3>🛒 Cart</h3>
+    <ul>
+        <li ng-repeat="item in cart">
+            {{ item.name }} - ${{ item.price }}
+            <button ng-click="removeFromCart($index)">❌</button>
+        </li>
+    </ul>
+    
+    <h3>Total: ${{ getTotal() }}</h3>
+    <input type="text" ng-model="customerName" placeholder="Enter your name">
+    <button ng-click="placeOrder()">Place Order</button>
+
+    <script src="appp.js"></script>
+</body>
+</html>
