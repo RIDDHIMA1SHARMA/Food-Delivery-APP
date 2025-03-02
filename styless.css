@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    color: #007bff;
+}
+
+div {
+    margin: 10px 0;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f8f9fa;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+button.delete {
+    background: #dc3545;
+}
+
+button.delete:hover {
+    background: #c82333;
+}
